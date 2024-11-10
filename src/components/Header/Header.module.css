@@ -8,10 +8,10 @@
   align-items: center;
   gap: 15px;
   background-color: #037049;
-  /* position: sticky; */
+  position: sticky;
   color: white;
-  /* top: 0;
-  z-index: 100; */
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
