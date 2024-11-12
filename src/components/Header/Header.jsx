@@ -6,6 +6,7 @@ import { GoSearch } from "react-icons/go";
 import { LuShoppingCart } from "react-icons/lu";
 import LowerHeader from "./LowerHeader";
 import { FiMapPin } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,9 +14,9 @@ const Header = () => {
       <div className={classes.header__container}>
         {/* left side link */}
         <div className={classes.logo}>
-          <a href="">
+          <Link to="/">
             <img src={logo} alt="amazon logo" />
-          </a>
+          </Link>
         </div>
 
         <div className={classes.delivery__container}>
@@ -37,30 +38,30 @@ const Header = () => {
         </div>
         {/* right side link */}
         <div className={classes.order__container}>
-          <a href="" className={classes.language}>
+          <Link to="" className={classes.language}>
             <img src={flag} alt="flag" />
             <select name="" id="">
               <option value="">EN</option>
             </select>
-          </a>
+          </Link>
 
-          <a href="">
+          <Link to="/auth">
             <div>
               <p>Hello, Sign In</p>
               <span>Account & Lists</span>
             </div>
-          </a>
-          <a href="">
+          </Link>
+          <Link to="/orders">
             <p>Returns</p>
             <span>& Orders</span>
-          </a>
-          <a href="" className={classes.cart__container}>
+          </Link>
+          <Link to="/cart" className={classes.cart__container}>
             <div className={classes.cart}>
               <LuShoppingCart size={26} />
               <span>0</span>
             </div>
             <p>Cart</p>
-          </a>
+          </Link>
         </div>
       </div>
       <LowerHeader />

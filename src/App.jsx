@@ -1,16 +1,12 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import CarouselEffect from "./components/CarouselEffect/carouselEffect";
-import Category from "./components/Category/Category";
-import Product from "./components/Product/Product";
+// import Header from "./components/Header/Header";
+import Routing from "./Routing";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <CarouselEffect />
-      <Category />
-      <Product />
+      {/* <Header /> */}
+      <Routing />
     </div>
   );
 };
