@@ -31,7 +31,9 @@ const Product = () => {
       ) : (
         <div className={classes.product}>
           {products?.map((singleProduct, i) => {
-            return <ProductCard key={i} product={singleProduct} />;
+            return (
+              <ProductCard key={i} product={singleProduct} renderAdd={true} />
+            );
           })}
         </div>
       )}

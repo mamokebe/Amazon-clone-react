@@ -17,6 +17,12 @@
 }
 .title {
   max-width: 450px;
+}
+.title h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.title p {
   font-size: 13px;
 }
 .button {
@@ -56,7 +62,7 @@
   box-shadow: none;
   height: auto;
   display: flex;
-  gap: 50px;
+  gap: 40px;
   width: 100%;
 }
 .product__flexed h3 {
@@ -75,6 +81,7 @@
   width: 300px !important;
   height: auto;
 }
+
 @media (max-width: 1450px) {
   .card__container {
     width: 90%;
@@ -100,6 +107,9 @@
   .product__flexed {
     display: flex;
     flex-direction: column;
+  }
+  .product__flexed {
+    gap: 20px;
   }
 }
 @media (max-width: 490px) {
