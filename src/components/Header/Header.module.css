@@ -2,16 +2,18 @@
   padding: 0;
   margin: 0;
 }
+.header__fixed {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .header__container {
   height: 60px;
   display: flex;
   align-items: center;
   gap: 15px;
   background-color: #037049;
-  position: sticky;
   color: white;
-  top: 0;
-  z-index: 100;
 }
 
 .logo {

@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Product.module.css";
 import Rating from "@mui/material/Rating";
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
+import { DataContext } from "../DataProvider/DataProvider";
+import { Type } from "../../utility/action.type";
 
 const ProductCard = ({ product, flex, renderDesc }) => {
   const { image, title, id, rating, price, description } = product;
-  // const { rate, count } = rating;
+
+  const [state, dispatch] = useContext(DataContext);
+  console.log(state);
+  const addToCart = () => {
+    dispatch({
+      type: Type.ADD_TO_BASKET,
+      item: {
+        image,
+        title,
+        id,
+        rating,
+        price,
+        description,
+      },
+    });
+  };
+
   return (
     <div
       className={`${classes.card__container} ${
@@ -32,7 +50,9 @@ const ProductCard = ({ product, flex, renderDesc }) => {
         <div>
           <CurrencyFormat amount={price} />
         </div>
-        <button className={classes.button}>add to cart</button>
+        <button className={classes.button} onClick={addToCart}>
+          add to cart
+        </button>
       </div>
     </div>
   );

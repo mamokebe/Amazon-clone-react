@@ -11,6 +11,7 @@ const Product = () => {
   const url = "https://fakestoreapi.com/products";
   const fetchAllProducts = async () => {
     try {
+      // setIsLoading(true);
       const res = await axios.get(url);
       setProducts(res.data);
       setIsLoading(false);
