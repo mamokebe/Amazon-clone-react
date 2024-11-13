@@ -5,9 +5,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../components/Api/endPoints";
 import ProductCard from "../../components/Product/ProductCard";
+import Loader from "../../components/Loader/Loader";
 
 const Results = () => {
   const [result, setResult] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const { categoryName } = useParams();
   const fetchCategory = async () => {
     try {
@@ -15,8 +18,10 @@ const Results = () => {
         `${productUrl}/products/category/${categoryName}`
       );
       setResult(res.data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
+      setIsLoading(false);
     }
   };
 
@@ -28,11 +33,15 @@ const Results = () => {
       <h1 style={{ padding: "30px" }}>Results</h1>
       <p style={{ padding: "30px" }}>Category / {categoryName}</p>
       <hr />
-      <div className={classes.products_container}>
-        {result?.map((product, i) => (
-          <ProductCard key={i} product={product} />
-        ))}
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className={classes.products_container}>
+          {result?.map((product, i) => (
+            <ProductCard key={i} product={product} />
+          ))}
+        </div>
+      )}
     </LayOut>
   );
 };
