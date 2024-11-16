@@ -14,7 +14,7 @@ const CarouselEffect = () => {
         showThumbs={false}
       >
         {img.map((imgItem) => {
-          return <img src={imgItem} />;
+          return <img key={imgItem} src={imgItem} />;
         })}
       </Carousel>
       <div className={classes.legend__img}></div>

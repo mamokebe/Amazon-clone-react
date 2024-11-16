@@ -1,0 +1,135 @@
+.login_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+.login_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form_new_hr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0px;
+}
+.form_new_hr hr {
+  width: 20%;
+}
+
+.logo img {
+  width: 180px;
+  cursor: pointer;
+}
+.login_form {
+  background-color: white;
+  width: max(23vw, 340px);
+  color: black;
+}
+
+.login_form_container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c9c9c9;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+}
+.login_form_title {
+  font-size: 13px;
+  color: black;
+}
+
+.login_form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.inputs ::placeholder {
+  text-align: start;
+  align-self: start;
+  align-items: start;
+}
+
+.login_form_inputs input {
+  border: 1px solid #c9c9c9;
+  width: 100%;
+  padding: 10px 0px 10px 5px;
+  border-radius: 4px;
+  outline-color: rgb(198, 52, 52);
+}
+.login_form_container button {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  color: black;
+  background-color: #febd69;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login_form_container button:hover {
+  background-color: #d49644;
+}
+.form_new button {
+  width: 100%;
+  padding: 10px !important;
+  border: 1px solid #c9c9c9;
+  background-color: white !important;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+.form_new button:hover {
+  background-color: #f5f4f4 !important;
+}
+
+.login_form_condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login_form_container p span {
+  color: rgb(33, 163, 244);
+  font-weight: 500;
+  cursor: pointer;
+}
+.login_footer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  gap: 10px;
+  padding-top: 30px;
+  box-shadow: 0 -3px 1px -3px rgb(80, 79, 79);
+}
+
+.login_footer_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.login_footer_title p a {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(33, 163, 244);
+}
+.login_form_container p span:hover,
+.login_footer_title p a:hover {
+  color: rgba(205, 55, 10, 0.975);
+  text-decoration: underline;
+}
+
+.login_footer_copy {
+  font-size: 12px;
+}
