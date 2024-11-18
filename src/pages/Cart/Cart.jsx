@@ -39,11 +39,11 @@ const Cart = () => {
           {basket?.length == 0 ? (
             <h4>Opps ! No items in your cart</h4>
           ) : (
-            basket?.map((item, i) => {
+            basket?.map((item) => {
               return (
                 <div className={classes.cart_product}>
                   <ProductCard
-                    key={i}
+                    key={item}
                     product={item}
                     renderDesc={true}
                     renderAdd={false}

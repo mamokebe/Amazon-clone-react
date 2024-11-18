@@ -25,10 +25,10 @@ const App = () => {
     });
   }, []);
   return (
-    <div>
+    <>
       <ToastContainer />
       <Routing />
-    </div>
+    </>
   );
 };
 

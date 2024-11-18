@@ -1,5 +1,5 @@
 import React from "react";
-import { MoonLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 const Loader = () => {
   return (
@@ -11,7 +11,7 @@ const Loader = () => {
         height: "60vh",
       }}
     >
-      <MoonLoader color="green" speedMultiplier={0.5} />
+      <FadeLoader color="green" speedMultiplier={0.5} />
     </div>
   );
 };
