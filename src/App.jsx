@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
-// import Header from "./components/Header/Header";
-import Routing from "./Routing";
+import Routing from "./Router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DataContext } from "./components/DataProvider/DataProvider";
