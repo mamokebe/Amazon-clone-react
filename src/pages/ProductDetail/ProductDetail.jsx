@@ -28,7 +28,7 @@ const ProductDetail = () => {
   useEffect(() => {
     fetchProductDetails();
   }, []);
-  console.log(singleProduct);
+  // console.log(singleProduct);
   return (
     <LayOut>
       {isLoading ? (

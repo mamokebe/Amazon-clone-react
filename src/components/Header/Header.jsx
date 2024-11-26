@@ -15,6 +15,7 @@ const Header = () => {
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
+  // console.log(basket);
   return (
     <div className={classes.header__fixed}>
       <div className={classes.header__container}>

@@ -5,7 +5,7 @@ import { DataContext } from "../../components/DataProvider/DataProvider";
 import ProductCard from "../../components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "../../components/CurrencyFormat/CurrencyFormat";
-//import axiosInstance from "../../Api/axios";
+// import axiosInstance from "../../Api/axios";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { db } from "../../utility/firebase";
@@ -44,11 +44,18 @@ const Payment = () => {
     const baseUrl = "http://127.0.0.1:5001/clone-cd1ae/us-central1/api";
     try {
       setProcessing(true);
+      // const res = await axiosInstance({
+      //   method: "post",
+      //   url: `/payment/create?total=${total * 100}`,
+      // });
+
       const res = await axios.post(
         `${baseUrl}/payment/create?total=${total * 100}`
       );
+
       // console.log(res.data);
       const clientSecret = res.data?.clientSecret;
+
       //2 client side (react side confirmation)
       //confirmation
       const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
