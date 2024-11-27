@@ -41,7 +41,10 @@ const Payment = () => {
     // which would refresh the page.
     event.preventDefault();
     //1. backend || functions --->contact to the client
-    const baseUrl = "http://127.0.0.1:5001/clone-cd1ae/us-central1/api";
+    // const baseUrl = "http://127.0.0.1:5001/clone-cd1ae/us-central1/api";
+    // deployed backend url
+    const baseUrl = "https://amazon-api-nuc1.onrender.com";
+
     try {
       setProcessing(true);
       // const res = await axiosInstance({
