@@ -93,7 +93,7 @@ const SignUp = () => {
                 <></>
               ) : (
                 <div className={classes.inputs}>
-                  <label htmlFor="name"> Your name</label> <br />
+                  <label htmlFor="name"> Name</label> <br />
                   <input
                     onChange={(e) => setUserName(e.target.value)}
                     value={userName}
@@ -106,7 +106,7 @@ const SignUp = () => {
               )}
               <div className={classes.inputs}>
                 {/* <p>Mobile number or email</p> */}
-                <label htmlFor="email"> Mobile number or email</label> <br />
+                <label htmlFor="email"> Email</label> <br />
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}

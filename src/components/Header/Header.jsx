@@ -9,6 +9,7 @@ import { FiMapPin } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
 import { auth } from "../../utility/firebase";
+import cart from "../../assets/cart-icon.png";
 
 const Header = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext);
@@ -75,7 +76,8 @@ const Header = () => {
           </Link>
           <Link to="/cart" className={classes.cart__container}>
             <div className={classes.cart}>
-              <LuShoppingCart size={26} />
+              {/* <LuShoppingCart size={26} /> */}
+              <img src={cart} alt="" />
               <span>{totalItem}</span>
             </div>
             <p>Cart</p>

@@ -71,14 +71,35 @@ const Cart = () => {
         </div>
         {basket?.length !== 0 && (
           <div className={classes.subtotal}>
-            <div>
-              <p>Subtotal ({basket?.length} items)</p>
-              <CurrencyFormat amount={total} />
+            <h3>Order Summary</h3>
+            <div className={classes.summary__details}>
+              <div className={classes.summary__total}>
+                <p>Subtotal ({basket?.length} items)</p>
+                {/* <CurrencyFormat amount={total} /> */}
+              </div>
+              <div className={classes.summary__item}>
+                <span>Price:</span>
+                <CurrencyFormat amount={total} />
+              </div>
+              <div className={classes.summary__item}>
+                <span>Delivery:</span>
+                <span>Free</span>
+              </div>
+              <div className={classes.summary__item}>
+                <span>tax (10%):</span>
+                <CurrencyFormat amount={total * 0.1} />
+              </div>
+
+              <div className={classes.summary__item}>
+                <span>Total price:</span>
+                <CurrencyFormat amount={total + total * 0.1} />
+              </div>
+
+              <span>
+                <input type="checkbox" />
+                <small>This order contains a gift</small>
+              </span>
             </div>
-            <span>
-              <input type="checkbox" />
-              <small>This order contains a gift</small>
-            </span>
             <Link to="/payments">Continue to checkout</Link>
           </div>
         )}
