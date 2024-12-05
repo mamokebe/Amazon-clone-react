@@ -48,9 +48,15 @@ live: [Here](https://amazone-clone-byreact.netlify.app/) on Netlify
   
 # Setup
 
-clone to computer using:
+clone to your local computer using:
 
-  https://github.com/mamokebe/Amazon-clone-react.git
+  url = https://github.com/mamokebe/Amazon-clone-react.git
+
+  steps to clone:
+  - first create folder & open in vscode
+  - then open terminal and
+  -  run git clone url
+      
 
 run npm install to initialize the dependencies
 
