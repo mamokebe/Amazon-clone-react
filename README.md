@@ -34,7 +34,7 @@ And non users can not access unless create account and login (ask credentials)
 
 # Build Status
 
-live: [Here](https://amazone-clone-byreact.netlify.app/) on Netflix
+live: [Here](https://amazone-clone-byreact.netlify.app/) on Netflify
 
 # Requirements
 - VScode
