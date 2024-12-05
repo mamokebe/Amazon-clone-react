@@ -58,6 +58,7 @@ clone to your local computer using:
   -  run git clone url
       
 To initialize the dependencies run:
+
  npm install 
 
 
